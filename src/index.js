@@ -10,10 +10,7 @@ const Theme = {
     DARK: 'dark-theme',
   };
 
-const checkboxReference = document.querySelector('.theme-switch__toggle');// ссылка на input
-//const checkboxReference= document.querySelector('.theme-switch__control'); //на div если не попадем в input-checkbox 
-//console.log(checkboxReference);
-//console.log(checkboxReference.checked);
+const checkboxReference = document.querySelector('.theme-switch__toggle');
 const getBody = document.querySelector('body');
 
 const onDarkTheme = () => {
@@ -40,45 +37,7 @@ const checkboxState = (e) => {
 
 checkboxReference.addEventListener('change', checkboxState);//слушает изменения на checkbox, если оно произошло, то выполняется функция checkboxState
 
-
 //=============================
+
 const getUl=document.querySelector('.menu');
-
-// const createMarcUp = dataArray => {
-//     return dataArray.reduce((acc, {name, description, image, price, ingredients}) => {
-//         acc += `
-//         <li class="menu__item">
-//         <article class="card">
-//         <img
-//           src=${image}
-//           alt=${name}
-//           class="card__image"/>
-//           <div class="card__content">
-//           <h2 class="card__name">${name}</h2>
-//           <p class="card__price">
-//             <i class="material-icons"> monetization_on </i>
-//            ${price} кредитов
-//           </p>
-//           <p class="card__descr">${description}</p>
-    
-//           <ul class="tag-list">
-//             ${ingredients.map(ingredient => (`<li class="tag-list__item">${ingredient}</li>`)).join('')}
-//           </ul>
-//         </div>
-//         <button class="card__button button">
-//       <i class="material-icons button__icon"> shopping_cart </i>
-//       В корзину
-//     </button>
-//         </article>
-//         </li>
-    
-//         `
-    
-//         return acc
-//     },'');
-// }
-
-//getUl.innerHTML = createMarcUp(data);
-//console.log(getUl);
-
 getUl.innerHTML = cardsTemplate(data);
